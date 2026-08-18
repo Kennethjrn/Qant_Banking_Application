@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 
+#balance 
 balance = 0
 def create_account():
     global name, account_no, balance
