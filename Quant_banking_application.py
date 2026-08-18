@@ -9,10 +9,14 @@ def create_account():
     account_no = account_entry.get()
     balance = float(deposit_entry.get())
     info.config(text=f"Account: {account_no}\nName: {name}\nBalance: ₦{balance:,.2f}")
+
+    #deposit
 def deposit():
     global balance
     balance += float(amount_entry.get())
     info.config(text=f"Account: {account_no}\nName: {name}\nBalance: ₦{balance:,.2f}")
+
+    #withdraw
 def withdraw():
     global balance
     amount = float(amount_entry.get())
@@ -21,8 +25,10 @@ def withdraw():
         info.config(text=f"Account: {account_no}\nName: {name}\nBalance: ₦{balance:,.2f}")
     else:
         messagebox.showerror("Error ", "Insufficient funds, please enter a valid amount")
+    #check balance
 def check_balance():
     messagebox.showinfo("Account Balance", f"₦{balance:,.2f}")
+    #exit app
 def exit_app():
     window.destroy()
 window = tk.Tk()
